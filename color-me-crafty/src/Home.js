@@ -29,20 +29,14 @@ function Home() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.nav}>
-        <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Color Me Crafty
-          </Typography>
-          <Button color="inherit" component={Link} to="/login">Login</Button>
-          <Button color="inherit" component={Link} to="/register">Register</Button>
-        </Toolbar>
-      </AppBar>
-      <Container>
-        <Typography variant="h1" component="h1">
-          Color Me Crafty
-        </Typography>
-      </Container>
+      <nav className="mb-5">
+        <ul className="flex space-x-4">
+          <li><Link to="/" className="text-black no-underline">Home</Link></li>
+          <li><Link to="/login" className="text-black no-underline">Login</Link></li>
+          <li><Link to="/profile" className="text-black no-underline">Profile</Link></li>
+        </ul>
+      </nav>
+      <h1 className="text-4xl">Color Me Crafty</h1>
     </div>
   );
 }
