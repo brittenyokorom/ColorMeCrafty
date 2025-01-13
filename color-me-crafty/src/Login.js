@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Login() {
+function Login({ setIsLoggedIn }) {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,7 +12,8 @@ function Login() {
     console.log('Email:', email);
     console.log('Password:', password);
 
-    // Redirect to the profile page
+    // Set logged-in status and redirect to the profile page
+    setIsLoggedIn(true);
     navigate('/profile');
   };
 
