@@ -1,0 +1,25 @@
+/* filepath: /C:/Users/britt/OneDrive/Documents/GitHub/ColorMeCrafty/my-profile-app/src/Home.css */
+.home-container {
+  background-color: blue;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
