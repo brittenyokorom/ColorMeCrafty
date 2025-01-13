@@ -1,12 +1,14 @@
-/* filepath: /C:/Users/britt/OneDrive/Documents/GitHub/ColorMeCrafty/my-profile-app/src/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 .home-container {
-  background-color: blue;
-  color: white;
+  background-color: #FFD1DC; /* Pastel pink background */
+  color: black;
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: 'Noto Sans', sans-serif; /* Noto Sans font */
 }
 
 nav ul {
@@ -20,6 +22,6 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
