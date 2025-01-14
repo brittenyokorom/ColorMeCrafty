@@ -3,18 +3,30 @@ import { useNavigate } from 'react-router-dom';
 
 function Login({ setIsLoggedIn }) {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
 
-  const handleLoginClick = (e) => {
+  const handleLoginClick = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    console.log('Email:', email);
-    console.log('Password:', password);
-
-    // Set logged-in status and redirect to the profile page
-    setIsLoggedIn(true);
-    navigate('/profile');
+    try {
+      const response = await fetch('http://localhost:5000/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await response.json();
+      if (data.success) {
+        setIsLoggedIn(true);
+        navigate('/profile');
+      } else {
+        setError(data.message);
+      }
+    } catch (error) {
+      setError('An error occurred. Please try again.');
+    }
   };
 
   const handleSignUpClick = () => {
@@ -25,16 +37,17 @@ function Login({ setIsLoggedIn }) {
     <div className="h-screen flex items-center justify-center bg-pink-200">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
+        {error && <p className="text-red-500 mb-4">{error}</p>}
         <form onSubmit={handleLoginClick}>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
-              Email
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
+              Username
             </label>
             <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               required
             />

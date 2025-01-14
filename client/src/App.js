@@ -8,9 +8,13 @@ import Navbar from './Navbar';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
     <Router>
-      {isLoggedIn && <Navbar />}
+      {isLoggedIn && <Navbar onLogout={handleLogout} />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
