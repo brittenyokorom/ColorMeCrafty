@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-function Login({ setIsLoggedIn }) {
+function Register() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
 
-  const handleLoginClick = async (e) => {
+  const handleRegisterClick = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
+      const response = await fetch('http://localhost:5000/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -19,23 +20,26 @@ function Login({ setIsLoggedIn }) {
       });
       const data = await response.json();
       if (data.success) {
-        localStorage.setItem('token', data.token);
-        setIsLoggedIn(true);
-        navigate('/profile');
+        setSuccess(data.message);
+        setError('');
+        navigate('/login');
       } else {
         setError(data.message);
+        setSuccess('');
       }
     } catch (error) {
       setError('An error occurred. Please try again.');
+      setSuccess('');
     }
   };
 
   return (
     <div className="h-screen flex items-center justify-center bg-pink-200">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">Register</h1>
         {error && <p className="text-red-500 mb-4">{error}</p>}
-        <form onSubmit={handleLoginClick}>
+        {success && <p className="text-green-500 mb-4">{success}</p>}
+        <form onSubmit={handleRegisterClick}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
               Username
@@ -67,14 +71,8 @@ function Login({ setIsLoggedIn }) {
               type="submit"
               className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
-              Login
-            </button>
-            <Link
-              to="/register"
-              className="inline-block align-baseline font-bold text-sm text-pink-500 hover:text-pink-700"
-            >
               Register
-            </Link>
+            </button>
           </div>
         </form>
       </div>
@@ -82,4 +80,4 @@ function Login({ setIsLoggedIn }) {
   );
 }
 
-export default Login;
+export default Register;

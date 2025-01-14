@@ -33,6 +33,19 @@ app.post('/api/login', (req, res) => {
   }
 });
 
+// Registration endpoint
+app.post('/api/register', (req, res) => {
+  const { username, password } = req.body;
+  const existingUser = users.find(u => u.username === username);
+  if (existingUser) {
+    return res.status(400).json({ success: false, message: 'Username already exists' });
+  }
+  const hashedPassword = bcrypt.hashSync(password, 8);
+  const newUser = { id: users.length + 1, username, password: hashedPassword };
+  users.push(newUser);
+  res.json({ success: true, message: 'User registered successfully' });
+});
+
 // Middleware to verify token
 const verifyToken = (req, res, next) => {
   const token = req.headers['x-access-token'];
