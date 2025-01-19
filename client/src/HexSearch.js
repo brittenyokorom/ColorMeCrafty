@@ -1,27 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function HexSearch({ setResults, setError, addColorToPalette }) {
-  const [query, setQuery] = useState('');
-  const [results, setLocalResults] = useState([]);
-  const COLORWAYS_API_KEY = process.env.REACT_APP_COLORWAYS_API_KEY;
+const COLORWAYS_API_KEY = process.env.REACT_APP_COLORWAYS_API_KEY;
 
-  const isValidHex = (hex) => {
-    const regex = /^#?([0-9A-F]{3}){1,2}$/i;
-    return regex.test(hex);
-  };
+function HexSearch({ setResults }) {
+  const [query, setQuery] = useState('#ff69b4'); // Initial color set to pink
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    console.log('Search query:', query);
-    if (!isValidHex(query)) {
-      setError('Invalid hex code format. Please use the format #RRGGBB or #RGB.');
-      setResults([]);
-      setLocalResults([]);
-      return;
-    }
-    const formattedQuery = query.replace('#', '');
-    console.log('Formatted query:', formattedQuery);
+    setLoading(true);
+    const formattedQuery = query.replace('#', ''); // Remove the '#' for the API request
     try {
       const response = await axios.get(`https://yarn-colorways.p.rapidapi.com/v1/match/${formattedQuery}`, {
         headers: {
@@ -29,72 +19,51 @@ function HexSearch({ setResults, setError, addColorToPalette }) {
           'X-RapidAPI-Host': 'yarn-colorways.p.rapidapi.com/v1'
         }
       });
-      console.log('API response:', response);
-      const extractedResults = response.data.data.map(item => ({
-        name: item.name,
+      const data = response.data.data;
+      const extractedResults = data.map(item => ({
         hex: item.hex,
-        brandName: item.brandName,
-        href: item.href,
-        yarnBrand: item.yarnBrand,
-        percentMatch: item.percentMatch
+        name: item.name,
+        yarnName: item.yarnName,
+        percentageMatch: item.percentMatch,
+        brandName: item.brandName
       }));
-      console.log('Extracted results:', extractedResults);
-      const sortedResults = extractedResults.sort((a, b) => b.percentMatch - a.percentMatch);
-      setResults(sortedResults);
-      setLocalResults(sortedResults);
+      // Sort results by highest percentage match
+      extractedResults.sort((a, b) => b.percentageMatch - a.percentageMatch);
+      setResults(extractedResults);
       setError('');
-    } catch (err) {
-      console.error('API error:', err);
-      setError('An error occurred while fetching data.');
-      setResults([]);
-      setLocalResults([]);
+    } catch (error) {
+      setError('An error occurred while searching for colors.');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div>
-      <form onSubmit={handleSearch}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="query">
-            Hex Code
+    <div className="hex-search-container mt-4">
+      <form onSubmit={handleSearch} className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
+          <label htmlFor="hs-color-input" className="block text-sm font-medium mb-2 text-gray-700">
+            Color Picker
           </label>
           <input
-            type="text"
-            id="query"
+            type="color"
+            id="hs-color-input"
+            className="color-picker-input"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="#RRGGBB or #RGB"
-            required
+            title="Choose your color"
           />
+          <div className="color-preview" style={{ backgroundColor: query }}></div>
         </div>
-        <button type="submit" className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-          Search
+        <button
+          type="submit"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          disabled={loading}
+        >
+          {loading ? 'Searching...' : 'Search'}
         </button>
       </form>
-      <div className="mt-6 max-h-96 overflow-y-auto">
-        {results.length > 0 && (
-          <div className="grid grid-cols-1 gap-4">
-            {results.map((result, index) => (
-              <div key={index} className="p-4 rounded-lg shadow-lg" style={{ backgroundColor: result.hex }}>
-                <p className="text-white font-bold">Name: {result.name}</p>
-                <p className="text-white">Hex: {result.hex}</p>
-                <p className="text-white">Brand: {result.brandName}</p>
-                <p className="text-white">Yarn Brand: {result.yarnBrand}</p>
-                <p className="text-white">Percent Match: {result.percentMatch}%</p>
-                <a href={result.href} className="text-white underline">More Info</a>
-                <button
-                  type="button"
-                  onClick={() => addColorToPalette(result.hex)}
-                  className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline"
-                >
-                  Add
-                </button>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+      {error && <p className="text-red-500 mt-4">{error}</p>}
     </div>
   );
 }

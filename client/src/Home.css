@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 .home-container {
-  background-color: #FFD1DC; /* Pastel pink background */
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
   color: black;
   height: 100vh;
   display: flex;
@@ -9,6 +9,54 @@
   align-items: center;
   justify-content: center;
   font-family: 'Noto Sans', sans-serif; /* Noto Sans font */
+}
+
+.home-container .bg-white {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.home-container p {
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.home-container .bg-blue-500 {
+  background-color: #4299e1;
+}
+
+.home-container .bg-blue-500:hover {
+  background-color: #3182ce;
+}
+
+.home-container .text-white {
+  color: #fff;
+}
+
+.home-container .font-bold {
+  font-weight: 700;
+}
+
+.home-container .rounded {
+  border-radius: 0.375rem;
+}
+
+.home-container .focus\:outline-none {
+  outline: none;
+}
+
+.home-container .focus\:shadow-outline {
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
 }
 
 nav ul {

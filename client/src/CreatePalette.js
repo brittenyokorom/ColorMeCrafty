@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import HexSearch from './HexSearch';
+import './CreatePalette.css';
 
 function CreatePalette() {
   const [title, setTitle] = useState('');
@@ -8,43 +8,43 @@ function CreatePalette() {
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
 
-  const addColorToPalette = (hex) => {
-    if (colors.length < 8) {
-      setColors([...colors, hex]);
-    } else {
-      setError('Palette can only contain up to 8 colors.');
-    }
+  const addColorToPalette = (hex, name, brandName) => {
+    setColors([...colors, { hex, name, brandName }]);
   };
 
   const removeColor = (index) => {
-    const newColors = colors.filter((_, i) => i !== index);
-    setColors(newColors);
+    setColors(colors.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    console.log('Palette created:', { title, colors });
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.post('/api/palettes', { title, colors }, {
+      const response = await fetch('http://localhost:5000/api/palettes', {
+        method: 'POST',
         headers: {
-          Authorization: token
-        }
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ title, colors })
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to save palette');
+      }
+
       setTitle('');
       setColors([]);
       setError('');
-      alert('Palette saved successfully');
-    } catch (err) {
-      console.error('Error saving palette:', err);
+    } catch (error) {
       setError('An error occurred while saving the palette.');
     }
   };
 
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-pink-200">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-6 text-center">Create a Palette</h1>
+    <div className="create-palette-container h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+        <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Create a Palette</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
@@ -61,7 +61,7 @@ function CreatePalette() {
           </div>
           <div className="grid grid-cols-4 gap-4 mb-4">
             {colors.map((color, index) => (
-              <div key={index} className="relative w-16 h-16 rounded-lg shadow-lg" style={{ backgroundColor: color }}>
+              <div key={index} className="relative w-20 h-20 rounded-lg shadow-lg flex items-center justify-center" style={{ backgroundColor: color.hex }}>
                 <button
                   type="button"
                   onClick={() => removeColor(index)}
@@ -69,6 +69,10 @@ function CreatePalette() {
                 >
                   &times;
                 </button>
+                <div className="absolute bottom-0 left-0 bg-white bg-opacity-75 text-xs p-1 rounded w-full text-center">
+                  <p className="font-bold">{color.name}</p>
+                  <p>{color.brandName}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -77,8 +81,25 @@ function CreatePalette() {
           </button>
         </form>
         <h2 className="text-xl font-bold mt-8 mb-4 text-center">Search Yarn Colorways</h2>
-        <HexSearch setResults={setResults} setError={setError} addColorToPalette={addColorToPalette} />
+        <HexSearch setResults={setResults} setError={setError} />
         {error && <p className="text-red-500 mt-4">{error}</p>}
+        <div className="results-container mt-4">
+          {results.map((result, index) => (
+            <div key={index} className="result-card mb-2 p-4 rounded-lg shadow-lg" style={{ backgroundColor: result.hex }}>
+              <p className="text-white font-bold">{result.name}</p>
+              <p className="text-white">{result.hex}</p>
+              <p className="text-white">{result.brandName}</p>
+              <p className="text-white">{result.percentMatch}% Match</p>
+              <button
+                type="button"
+                onClick={() => addColorToPalette(result.hex, result.name, result.brandName)}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded focus:outline-none focus:shadow-outline mt-2"
+              >
+                Add to Palette
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
