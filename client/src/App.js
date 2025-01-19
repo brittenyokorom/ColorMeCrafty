@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Home';
-import Profile from './Profile';
-import Login from './Login';
 import Register from './Register';
+import CreatePalette from './CreatePalette';
 import Navbar from './Navbar';
+import Login from './Login';
+import Profile from './Profile';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
@@ -20,8 +21,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/register" element={<Register setIsLoggedIn={setIsLoggedIn} />} />
+        <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate to="/login" />} />
+        <Route path="/create-palette" element={isLoggedIn ? <CreatePalette /> : <Navigate to="/login" />} />
       </Routes>
     </Router>
   );

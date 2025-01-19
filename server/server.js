@@ -1,82 +1,76 @@
 require('dotenv').config();
 const express = require('express');
+const { MongoClient } = require('mongodb');
 const path = require('path');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const SECRET_KEY = process.env.SECRET_KEY;
 
-// Middleware
-app.use(bodyParser.json());
+const uri = 'mongodb://localhost:27017';
+const client = new MongoClient(uri, { useUnifiedTopology: true });
+
+app.use(express.json());
 app.use(cors());
 
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../client/build')));
 
-// Simple in-memory user store for demonstration purposes
-const users = [
-  { id: 1, username: 'user', password: bcrypt.hashSync('password', 8) }
-];
-
-// Authentication endpoint
-app.post('/api/login', (req, res) => {
-  const { username, password } = req.body;
-  const user = users.find(u => u.username === username);
-  if (user && bcrypt.compareSync(password, user.password)) {
-    const token = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: '1h' });
-    res.json({ success: true, message: 'Login successful', token });
-  } else {
-    res.status(401).json({ success: false, message: 'Invalid credentials' });
+// Connect to MongoDB
+client.connect(err => {
+  if (err) {
+    console.error('Error connecting to MongoDB:', err);
+    process.exit(1);
   }
-});
+  console.log('Connected to MongoDB');
+  const db = client.db('colormecrafty');
+  const usersCollection = db.collection('users');
 
-// Registration endpoint
-app.post('/api/register', (req, res) => {
-  const { username, password } = req.body;
-  const existingUser = users.find(u => u.username === username);
-  if (existingUser) {
-    return res.status(400).json({ success: false, message: 'Username already exists' });
-  }
-  const hashedPassword = bcrypt.hashSync(password, 8);
-  const newUser = { id: users.length + 1, username, password: hashedPassword };
-  users.push(newUser);
-  res.json({ success: true, message: 'User registered successfully' });
-});
-
-// Middleware to verify token
-const verifyToken = (req, res, next) => {
-  const token = req.headers['x-access-token'];
-  if (!token) {
-    return res.status(403).send({ message: 'No token provided.' });
-  }
-  jwt.verify(token, SECRET_KEY, (err, decoded) => {
-    if (err) {
-      return res.status(500).send({ message: 'Failed to authenticate token.' });
+  // Registration endpoint
+  app.post('/api/register', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+      console.log('Registering user:', username);
+      const hashedPassword = await bcrypt.hash(password, 10);
+      const user = { username, password: hashedPassword, palettes: [] };
+      await usersCollection.insertOne(user);
+      console.log('User registered successfully:', username);
+      res.status(201).send({ message: 'User registered successfully' });
+    } catch (err) {
+      console.error('Error registering user:', err);
+      res.status(500).send({ message: 'Error registering user' });
     }
-    req.userId = decoded.id;
-    next();
   });
-};
 
-// Protected route example
-app.get('/api/profile', verifyToken, (req, res) => {
-  const user = users.find(u => u.id === req.userId);
-  if (user) {
-    res.json({ success: true, user });
-  } else {
-    res.status(404).json({ success: false, message: 'User not found' });
-  }
-});
+  // Login endpoint
+  app.post('/api/login', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+      console.log('Logging in user:', username);
+      const user = await usersCollection.findOne({ username });
+      if (!user) {
+        console.log('User not found:', username);
+        return res.status(400).send({ message: 'Invalid username or password' });
+      }
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+      if (!isPasswordValid) {
+        console.log('Invalid password for user:', username);
+        return res.status(400).send({ message: 'Invalid username or password' });
+      }
+      const token = jwt.sign({ userId: user._id }, SECRET_KEY);
+      console.log('User logged in successfully:', username);
+      res.send({ token });
+    } catch (err) {
+      console.error('Error logging in user:', err);
+      res.status(500).send({ message: 'Error logging in user' });
+    }
+  });
 
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+  // Other endpoints...
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+  });
 });
