@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import HexSearch from './HexSearch';
-import './CreatePalette.css';
+import '../styles/CreatePalette.css';
 
 function CreatePalette() {
   const [title, setTitle] = useState('');

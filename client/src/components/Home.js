@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Ensure this file exists and is correctly located
+import '../styles/Home.css';
 
 function Home() {
   const token = localStorage.getItem('token');
