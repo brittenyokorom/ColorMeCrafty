@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../styles/HexSearch.css';
 
 const COLORWAYS_API_KEY = process.env.REACT_APP_COLORWAYS_API_KEY;
 
@@ -40,11 +41,8 @@ function HexSearch({ setResults }) {
 
   return (
     <div className="hex-search-container mt-4">
-      <form onSubmit={handleSearch} className="flex items-center space-x-4">
+      <form onSubmit={handleSearch} className="flex items-center justify-center space-x-4">
         <div className="flex items-center space-x-2">
-          <label htmlFor="hs-color-input" className="block text-sm font-medium mb-2 text-gray-700">
-            Color Picker
-          </label>
           <input
             type="color"
             id="hs-color-input"
@@ -52,8 +50,8 @@ function HexSearch({ setResults }) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             title="Choose your color"
+            style={{ backgroundColor: query, height: '2.5rem', width: '5rem' }} 
           />
-          <div className="color-preview" style={{ backgroundColor: query }}></div>
         </div>
         <button
           type="submit"

@@ -61,7 +61,7 @@ function CreatePalette() {
           </div>
           <div className="grid grid-cols-4 gap-4 mb-4">
             {colors.map((color, index) => (
-              <div key={index} className="relative w-20 h-20 rounded-lg shadow-lg flex items-center justify-center" style={{ backgroundColor: color.hex }}>
+              <div key={index} className="relative w-20 h-16 rounded-lg shadow-lg flex items-center justify-center" style={{ backgroundColor: color.hex }}>
                 <button
                   type="button"
                   onClick={() => removeColor(index)}
@@ -89,7 +89,7 @@ function CreatePalette() {
               <p className="text-white font-bold">{result.name}</p>
               <p className="text-white">{result.hex}</p>
               <p className="text-white">{result.brandName}</p>
-              <p className="text-white">{result.percentMatch}% Match</p>
+              <p className="text-white">{result.percentageMatch}% Match</p>
               <button
                 type="button"
                 onClick={() => addColorToPalette(result.hex, result.name, result.brandName)}

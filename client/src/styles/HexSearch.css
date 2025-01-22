@@ -1,0 +1,9 @@
+.hex-search-container {
+  margin-top: 2rem;
+}
+
+.color-picker-input {
+  padding: 0.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
