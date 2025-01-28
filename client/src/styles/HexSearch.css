@@ -1,9 +1,28 @@
-.hex-search-container {
-  margin-top: 2rem;
-}
-
 .color-picker-input {
   padding: 0.5rem;
   height: 2.5rem;
   cursor: pointer;
+  background-color: #ffffff;
+  width: 5rem;
+  border: none;
+}
+
+.search-button {
+  background-color: #4299e1;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+.search-button:hover {
+  background-color: #2b6cb0;
+}
+
+.search-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
 }

@@ -40,7 +40,7 @@ function HexSearch({ setResults }) {
   };
 
   return (
-    <div className="hex-search-container mt-4">
+    <div className="mt-4">
       <form onSubmit={handleSearch} className="flex items-center justify-center space-x-4">
         <div className="flex items-center space-x-2">
           <input
@@ -55,7 +55,7 @@ function HexSearch({ setResults }) {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          className="search-button"
           disabled={loading}
         >
           {loading ? 'Searching...' : 'Search'}
