@@ -1,55 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faLock, faUnlock } from '@fortawesome/free-solid-svg-icons';
 import HexSearch from './HexSearch';
 import Filter from './Filter';
+import colors from '../data/colors.json';
 import '../styles/CreatePalette.css';
+
+console.log('Imported Colors:', colors);
 
 function CreatePalette() {
   const [title, setTitle] = useState('');
-  const [colors, setColors] = useState([]);
+  const [colorsState, setColors] = useState([]);
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
-  const [brands, setBrands] = useState([]);
+  const [brands] = useState(colors); 
   const [selectedBrands, setSelectedBrands] = useState([]);
 
-  useEffect(() => {
-    // Fetch the list of brands from the API
-    const fetchBrands = async () => {
-      try {
-        const response = await fetch('https://yarn-colorways.p.rapidapi.com/v1/brands', {
-          method: 'GET',
-          headers: {
-            'X-RapidAPI-Host': 'yarn-colorways.p.rapidapi.com',
-            'X-RapidAPI-Key': process.env.REACT_APP_COLORWAYS_API_KEY
-          }
-        });
-        const data = await response.json();
-        console.log('Fetched brands:', data); // Log the fetched data
-        setBrands(data.data);
-      } catch (error) {
-        console.error('Error fetching brands:', error); // Log any errors
-        setError('Failed to fetch brands');
-      }
-    };
-
-    fetchBrands();
-  }, []); // Empty dependency array ensures this runs only once
-
   const addColorToPalette = (hex, name, brandName) => {
-    if (colors.some(color => color.hex === hex)) {
+    if (colorsState.some(color => color.hex === hex)) {
       setError('Color already in palette');
       return;
     }
-    setColors([...colors, { hex, name, brandName, locked: false }]);
+    setColors([...colorsState, { hex, name, brandName, locked: false }]);
   };
 
   const removeColor = (index) => {
-    setColors(colors.filter((_, i) => i !== index));
+    setColors(colorsState.filter((_, i) => i !== index));
   };
 
   const toggleLockColor = (index) => {
-    setColors(colors.map((color, i) => i === index ? { ...color, locked: !color.locked } : color));
+    setColors(colorsState.map((color, i) => i === index ? { ...color, locked: !color.locked } : color));
   };
 
   const handleSubmit = async (e) => {
@@ -62,16 +42,16 @@ function CreatePalette() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({ title, colors })
+        body: JSON.stringify({ title, colors: colorsState })
       });
 
       if (!response.ok) {
         throw new Error('Failed to save palette');
       }
 
-      setTitle(title);
-      setColors(colors);
-      setError(error);
+      setTitle('');
+      setColors([]);
+      setError('');
     } catch (error) {
       setError('An error occurred while saving the palette.');
     }
@@ -108,7 +88,7 @@ function CreatePalette() {
             />
           </div>
           <div className="grid grid-cols-4 gap-4 mb-4">
-            {colors.map((color, index) => (
+            {colorsState.map((color, index) => (
               <div key={index} className="palette-card" style={{ backgroundColor: color.hex }}>
                 <div className="options-section">
                   <button

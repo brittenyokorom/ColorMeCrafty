@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: ColorMeCraftyClient
+    env: node
+    plan: free
+    buildCommand: cd client && npm install && npm run build
+    startCommand: cd client && npm start
+    envVars:
+      - key: REACT_APP_COLORWAYS_API_KEY
+        value: 35165eb694msh6e6fd548dd94cf0p1d737ejsnb0b33b801147
+      - key: SECRET_KEY
+        value: f441e7004537b5e8cda53545c53b6dbc734eded251543da09a797f849b67e58af972940115250b41a38d185d0bebf3daffdc77cc7ebf561e83fe2179993433bd
+
+  - type: web
+    name: ColorMeCraftyServer
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && node app.js
+    envVars:
+      - key: SECRET_KEY
+        value: f441e7004537b5e8cda53545c53b6dbc734eded251543da09a797f849b67e58af972940115250b41a38d185d0bebf3daffdc77cc7ebf561e83fe2179993433bd
+      - key: REACT_APP_COLORWAYS_API_KEY
+        value: 35165eb694msh6e6fd548dd94cf0p1d737ejsnb0b33b801147

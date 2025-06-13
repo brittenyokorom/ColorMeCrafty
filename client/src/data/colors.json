@@ -1,0 +1,1574 @@
+{
+  "meta": {
+    "total": 196
+  },
+  "data": [
+    {
+      "brandId": "4_seasons",
+      "brandName": "4 Seasons",
+      "yarnId": "flinders_cotton_8_ply",
+      "yarnName": "Flinders Cotton 8 Ply",
+      "yarnWeightId": "d",
+      "colorways": 23
+    },
+    {
+      "brandId": "4_seasons",
+      "brandName": "4 Seasons",
+      "yarnId": "marvel_8_ply",
+      "yarnName": "Marvel 8 Ply",
+      "yarnWeightId": "d",
+      "colorways": 57
+    },
+    {
+      "brandId": "alize",
+      "brandName": "Alize",
+      "yarnId": "cotton_gold",
+      "yarnName": "Cotton Gold",
+      "yarnWeightId": "s",
+      "colorways": 65
+    },
+    {
+      "brandId": "bc_garn",
+      "brandName": "BC Garn",
+      "yarnId": "allino",
+      "yarnName": "Allino",
+      "yarnWeightId": "d",
+      "colorways": 32
+    },
+    {
+      "brandId": "bellissimo",
+      "brandName": "Bellissimo",
+      "yarnId": "bellissimo_8",
+      "yarnName": "Bellissimo 8",
+      "yarnWeightId": "d",
+      "colorways": 58
+    },
+    {
+      "brandId": "bendigo_woolen_mills",
+      "brandName": "Bendigo Woolen Mills",
+      "yarnId": "classic_8_ply",
+      "yarnName": "Classic 8 Ply",
+      "yarnWeightId": "d",
+      "colorways": 60
+    },
+    {
+      "brandId": "bernat",
+      "brandName": "Bernat",
+      "yarnId": "blanket",
+      "yarnName": "Blanket",
+      "yarnWeightId": "sb",
+      "colorways": 28
+    },
+    {
+      "brandId": "bernat",
+      "brandName": "Bernat",
+      "yarnId": "blanket_mist_ical",
+      "yarnName": "Blanket Mist-ical",
+      "yarnWeightId": "sb",
+      "colorways": 15
+    },
+    {
+      "brandId": "bernat",
+      "brandName": "Bernat",
+      "yarnId": "softee_baby",
+      "yarnName": "Softee Baby",
+      "yarnWeightId": "d",
+      "colorways": 22
+    },
+    {
+      "brandId": "bernat",
+      "brandName": "Bernat",
+      "yarnId": "softee_cotton",
+      "yarnName": "Softee Cotton",
+      "yarnWeightId": "d",
+      "colorways": 14
+    },
+    {
+      "brandId": "bernat",
+      "brandName": "Bernat",
+      "yarnId": "super_value",
+      "yarnName": "Super Value",
+      "yarnWeightId": "w",
+      "colorways": 50
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "comfort",
+      "yarnName": "Comfort",
+      "yarnWeightId": "w",
+      "colorways": 68
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "remix",
+      "yarnName": "Remix",
+      "yarnWeightId": "w",
+      "colorways": 28
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "remix_light",
+      "yarnName": "Remix Light",
+      "yarnWeightId": "d",
+      "colorways": 28
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "ultra_wool",
+      "yarnName": "Ultra Wool",
+      "yarnWeightId": "w",
+      "colorways": 84
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "ultra_wool_dk",
+      "yarnName": "Ultra Wool DK",
+      "yarnWeightId": "d",
+      "colorways": 40
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "vintage",
+      "yarnName": "Vintage",
+      "yarnWeightId": "w",
+      "colorways": 95
+    },
+    {
+      "brandId": "berroco",
+      "brandName": "Berroco",
+      "yarnId": "vintage_baby",
+      "yarnName": "Vintage Baby",
+      "yarnWeightId": "d",
+      "colorways": 29
+    },
+    {
+      "brandId": "big_twist",
+      "brandName": "Big Twist",
+      "yarnId": "big_twist_soft",
+      "yarnName": "Big Twist Soft",
+      "yarnWeightId": "a",
+      "colorways": 18
+    },
+    {
+      "brandId": "big_twist",
+      "brandName": "Big Twist",
+      "yarnId": "heather",
+      "yarnName": "Heather",
+      "yarnWeightId": "a",
+      "colorways": 9
+    },
+    {
+      "brandId": "big_twist",
+      "brandName": "Big Twist",
+      "yarnId": "value",
+      "yarnName": "Value",
+      "yarnWeightId": "w",
+      "colorways": 63
+    },
+    {
+      "brandId": "big_twist",
+      "brandName": "Big Twist",
+      "yarnId": "shine",
+      "yarnName": "Shine",
+      "yarnWeightId": "d",
+      "colorways": 12
+    },
+    {
+      "brandId": "caron",
+      "brandName": "Caron",
+      "yarnId": "one_pound",
+      "yarnName": "One Pound",
+      "yarnWeightId": "w",
+      "colorways": 54
+    },
+    {
+      "brandId": "caron",
+      "brandName": "Caron",
+      "yarnId": "simply_soft_brites",
+      "yarnName": "Simply Soft Brites",
+      "yarnWeightId": "w",
+      "colorways": 7
+    },
+    {
+      "brandId": "caron",
+      "brandName": "Caron",
+      "yarnId": "simply_soft_solids",
+      "yarnName": "Simply Soft Solids",
+      "yarnWeightId": "w",
+      "colorways": 50
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "220_solids_and_heathers",
+      "yarnName": "220 Solids & Heathers",
+      "yarnWeightId": "w",
+      "colorways": 153
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "220_superwash",
+      "yarnName": "220 Superwash",
+      "yarnWeightId": "d",
+      "colorways": 202
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "220_superwash_merino",
+      "yarnName": "220 Superwash Merino",
+      "yarnWeightId": "w",
+      "colorways": 110
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "aegean_tweed",
+      "yarnName": "Aegean Tweed",
+      "yarnWeightId": "d",
+      "colorways": 27
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "anchor_bay",
+      "yarnName": "Anchor Bay",
+      "yarnWeightId": "d",
+      "colorways": 46
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "heritage",
+      "yarnName": "Heritage",
+      "yarnWeightId": "f",
+      "colorways": 110
+    },
+    {
+      "brandId": "cascade",
+      "brandName": "Cascade",
+      "yarnId": "ultra_pima",
+      "yarnName": "Ultra Pima",
+      "yarnWeightId": "d",
+      "colorways": 124
+    },
+    {
+      "brandId": "coop_knits",
+      "brandName": "Coop Knits",
+      "yarnId": "socks_yeah",
+      "yarnName": "Socks Yeah!",
+      "yarnWeightId": "lf",
+      "colorways": 35
+    },
+    {
+      "brandId": "dmc",
+      "brandName": "DMC",
+      "yarnId": "six_strand_embroidery_floss",
+      "yarnName": "Six-Strand Embroidery Floss",
+      "yarnWeightId": "t",
+      "colorways": 506
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "alpaca",
+      "yarnName": "Alpaca",
+      "yarnWeightId": "s",
+      "colorways": 51
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "baby-merino",
+      "yarnName": "Baby Merino",
+      "yarnWeightId": "s",
+      "colorways": 52
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "cotton_light",
+      "yarnName": "Cotton Light",
+      "yarnWeightId": "d",
+      "colorways": 34
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "cotton_merino",
+      "yarnName": "Cotton Merino",
+      "yarnWeightId": "d",
+      "colorways": 24
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "karisma",
+      "yarnName": "Karisma",
+      "yarnWeightId": "d",
+      "colorways": 48
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "lima",
+      "yarnName": "Lima",
+      "yarnWeightId": "d",
+      "colorways": 36
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "loves_you_7",
+      "yarnName": "Loves You 7",
+      "yarnWeightId": "s",
+      "colorways": 57
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "loves_you_9",
+      "yarnName": "Loves You 9",
+      "yarnWeightId": "s",
+      "colorways": 19
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "merino_extra_fine",
+      "yarnName": "Merino Extra Fine",
+      "yarnWeightId": "d",
+      "colorways": 46
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "muskat",
+      "yarnName": "Muskat",
+      "yarnWeightId": "d",
+      "colorways": 45
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "nepal",
+      "yarnName": "Nepal",
+      "yarnWeightId": "a",
+      "colorways": 44
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "paris",
+      "yarnName": "Paris",
+      "yarnWeightId": "a",
+      "colorways": 57
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "safran",
+      "yarnName": "Safran",
+      "yarnWeightId": "s",
+      "colorways": 46
+    },
+    {
+      "brandId": "drops",
+      "brandName": "DROPS",
+      "yarnId": "sky",
+      "yarnName": "Sky",
+      "yarnWeightId": "d",
+      "colorways": 30
+    },
+    {
+      "brandId": "ella_rae",
+      "brandName": "Ella Rae",
+      "yarnId": "superwash_classic",
+      "yarnName": "Superwash Classic",
+      "yarnWeightId": "w",
+      "colorways": 138
+    },
+    {
+      "brandId": "elle",
+      "brandName": "Elle",
+      "yarnId": "charity_dk",
+      "yarnName": "Charity DK",
+      "yarnWeightId": "d",
+      "colorways": 72
+    },
+    {
+      "brandId": "fiddlesticks",
+      "brandName": "Fiddlesticks",
+      "yarnId": "finch",
+      "yarnName": "Finch",
+      "yarnWeightId": "a",
+      "colorways": 53
+    },
+    {
+      "brandId": "fiddlesticks",
+      "brandName": "Fiddlesticks",
+      "yarnId": "posie",
+      "yarnName": "Posie",
+      "yarnWeightId": "f",
+      "colorways": 41
+    },
+    {
+      "brandId": "fiddlesticks",
+      "brandName": "Fiddlesticks",
+      "yarnId": "superb_8",
+      "yarnName": "Superb 8",
+      "yarnWeightId": "d",
+      "colorways": 85
+    },
+    {
+      "brandId": "fiddlesticks",
+      "brandName": "Fiddlesticks",
+      "yarnId": "superb_10",
+      "yarnName": "Superb 10",
+      "yarnWeightId": "d",
+      "colorways": 47
+    },
+    {
+      "brandId": "fiddlesticks",
+      "brandName": "Fiddlesticks",
+      "yarnId": "wren",
+      "yarnName": "Wren",
+      "yarnWeightId": "d",
+      "colorways": 52
+    },
+    {
+      "brandId": "filatura_di_crosa",
+      "brandName": "Filatura Di Crosa",
+      "yarnId": "zara_8",
+      "yarnName": "Zara 8",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "garnmanufaktur",
+      "brandName": "Garnmanufaktur",
+      "yarnId": "lola_bobbel_solo",
+      "yarnName": "LoLa Bobbel Solo",
+      "yarnWeightId": "a",
+      "colorways": 122
+    },
+    {
+      "brandId": "gepard",
+      "brandName": "Gepard",
+      "yarnId": "pura_lana",
+      "yarnName": "Pura Lana",
+      "yarnWeightId": "d",
+      "colorways": 37
+    },
+    {
+      "brandId": "gruendl",
+      "brandName": "Gründl",
+      "yarnId": "cotton_fun",
+      "yarnName": "Cotton Fun",
+      "yarnWeightId": "s",
+      "colorways": 24
+    },
+    {
+      "brandId": "gruendl",
+      "brandName": "Gründl",
+      "yarnId": "funny_uni",
+      "yarnName": "Funny uni",
+      "yarnWeightId": "sb",
+      "colorways": 25
+    },
+    {
+      "brandId": "herrschners",
+      "brandName": "Herrschners",
+      "yarnId": "worsted_8",
+      "yarnName": "Worsted 8",
+      "yarnWeightId": "w",
+      "colorways": 88
+    },
+    {
+      "brandId": "himalaya",
+      "brandName": "Himalaya",
+      "yarnId": "dolphin_baby",
+      "yarnName": "Dolphin Baby",
+      "yarnWeightId": "sb",
+      "colorways": 68
+    },
+    {
+      "brandId": "himalaya",
+      "brandName": "Himalaya",
+      "yarnId": "everyday",
+      "yarnName": "Everyday",
+      "yarnWeightId": "a",
+      "colorways": 76
+    },
+    {
+      "brandId": "himalaya",
+      "brandName": "Himalaya",
+      "yarnId": "everyday_worsted",
+      "yarnName": "Everyday Worsted",
+      "yarnWeightId": "w",
+      "colorways": 42
+    },
+    {
+      "brandId": "himalaya",
+      "brandName": "Himalaya",
+      "yarnId": "velvet",
+      "yarnName": "Velvet",
+      "yarnWeightId": "sb",
+      "colorways": 49
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "acacia",
+      "yarnName": "Acacia",
+      "yarnWeightId": "d",
+      "colorways": 18
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "amigo_chunky",
+      "yarnName": "Amigo Chunky",
+      "yarnWeightId": "b",
+      "colorways": 57
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "amigo_xl",
+      "yarnName": "Amigo XL",
+      "yarnWeightId": "w",
+      "colorways": 61
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "amigo",
+      "yarnName": "Amigo",
+      "yarnWeightId": "d",
+      "colorways": 61
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "daily_stitch_acrylic_xl",
+      "yarnName": "Daily Stitch Acrylic XL",
+      "yarnWeightId": "w",
+      "colorways": 33
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "friends_cotton_8_4",
+      "yarnName": "Friends Cotton 8/4",
+      "yarnWeightId": "f",
+      "colorways": 105
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "friends_cotton_8_8",
+      "yarnName": "Friends Cotton 8/8",
+      "yarnWeightId": "d",
+      "colorways": 75
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "friends_cotton_silk",
+      "yarnName": "Friends Cotton Silk",
+      "yarnWeightId": "d",
+      "colorways": 23
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "friends_wheel",
+      "yarnName": "Friends Wheel",
+      "yarnWeightId": "s",
+      "colorways": 50
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "friends_wool",
+      "yarnName": "Friends Wool",
+      "yarnWeightId": "w",
+      "colorways": 56
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "happy_place_solid",
+      "yarnName": "Happy Place Solid",
+      "yarnWeightId": "d",
+      "colorways": 20
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "highland_wool",
+      "yarnName": "Highland Wool",
+      "yarnWeightId": "d",
+      "colorways": 31
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "honey_bunny",
+      "yarnName": "Honey Bunny",
+      "yarnWeightId": "sb",
+      "colorways": 36
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "kind_feather",
+      "yarnName": "Kind Feather",
+      "yarnWeightId": "d",
+      "colorways": 30
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "rainbow_cotton_8_4",
+      "yarnName": "Rainbow Cotton 8/4",
+      "yarnWeightId": "f",
+      "colorways": 100
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "rainbow_cotton_8_8",
+      "yarnName": "Rainbow Cotton 8/8",
+      "yarnWeightId": "d",
+      "colorways": 100
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "tweed_dreams",
+      "yarnName": "Tweed Dreams",
+      "yarnWeightId": "d",
+      "colorways": 31
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "twister_solid",
+      "yarnName": "Twister Solid",
+      "yarnWeightId": "s",
+      "colorways": 50
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "udon",
+      "yarnName": "Udon",
+      "yarnWeightId": "sb",
+      "colorways": 14
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "unicorn_solid",
+      "yarnName": "Unicorn Solid",
+      "yarnWeightId": "f",
+      "colorways": 27
+    },
+    {
+      "brandId": "hobbii",
+      "brandName": "Hobbii",
+      "yarnId": "winter_glow_solid",
+      "yarnName": "Winter Glow Solid",
+      "yarnWeightId": "d",
+      "colorways": 39
+    },
+    {
+      "brandId": "hobby_lobby",
+      "brandName": "Hobby Lobby",
+      "yarnId": "i_love_this_cotton_yarn",
+      "yarnName": "I Love This Cotton Yarn",
+      "yarnWeightId": "a",
+      "colorways": 40
+    },
+    {
+      "brandId": "hobby_lobby",
+      "brandName": "Hobby Lobby",
+      "yarnId": "i_love_this_yarn",
+      "yarnName": "I Love This Yarn",
+      "yarnWeightId": "a",
+      "colorways": 70
+    },
+    {
+      "brandId": "hobby_lobby",
+      "brandName": "Hobby Lobby",
+      "yarnId": "yarn_bee_soft_and_sleek",
+      "yarnName": "Yarn Bee Soft & Sleek",
+      "yarnWeightId": "a",
+      "colorways": 45
+    },
+    {
+      "brandId": "hobby_store",
+      "brandName": "Hobby Store",
+      "yarnId": "aran_anti_pill",
+      "yarnName": "Aran Anti-Pill",
+      "yarnWeightId": "a",
+      "colorways": 51
+    },
+    {
+      "brandId": "holst",
+      "brandName": "Holst",
+      "yarnId": "coast",
+      "yarnName": "Coast",
+      "yarnWeightId": "l",
+      "colorways": 88
+    },
+    {
+      "brandId": "ice_yarns",
+      "brandName": "Ice Yarns",
+      "yarnId": "classic_dk",
+      "yarnName": "Classic DK",
+      "yarnWeightId": "d",
+      "colorways": 84
+    },
+    {
+      "brandId": "ice_yarns",
+      "brandName": "Ice Yarns",
+      "yarnId": "lorena_worsted",
+      "yarnName": "Lorena Worsted",
+      "yarnWeightId": "a",
+      "colorways": 45
+    },
+    {
+      "brandId": "katia",
+      "brandName": "Katia",
+      "yarnId": "merino_classic",
+      "yarnName": "Merino Classic",
+      "yarnWeightId": "d",
+      "colorways": 64
+    },
+    {
+      "brandId": "katia",
+      "brandName": "Katia",
+      "yarnId": "planet",
+      "yarnName": "Planet",
+      "yarnWeightId": "a",
+      "colorways": 51
+    },
+    {
+      "brandId": "katia",
+      "brandName": "Katia",
+      "yarnId": "promo_fin",
+      "yarnName": "Promo Fin",
+      "yarnWeightId": "s",
+      "colorways": 68
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "brava_tweed",
+      "yarnName": "Brava Tweed",
+      "yarnWeightId": "w",
+      "colorways": 15
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "brava_worsted",
+      "yarnName": "Brava Worsted",
+      "yarnWeightId": "w",
+      "colorways": 50
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "heatherly_sport",
+      "yarnName": "Heatherly Sport",
+      "yarnWeightId": "s",
+      "colorways": 27
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "mighty_stitch",
+      "yarnName": "Mighty Stitch",
+      "yarnWeightId": "w",
+      "colorways": 32
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "palette",
+      "yarnName": "Palette",
+      "yarnWeightId": "f",
+      "colorways": 156
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "shine_sport",
+      "yarnName": "Shine Sport",
+      "yarnWeightId": "s",
+      "colorways": 30
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "stroll",
+      "yarnName": "Stroll",
+      "yarnWeightId": "f",
+      "colorways": 47
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "swish_bulky",
+      "yarnName": "Swish Bulky",
+      "yarnWeightId": "b",
+      "colorways": 21
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "swish_dk",
+      "yarnName": "Swish DK",
+      "yarnWeightId": "d",
+      "colorways": 42
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "swish_worsted",
+      "yarnName": "Swish Worsted",
+      "yarnWeightId": "w",
+      "colorways": 81
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "wool_of_the_andes_worsted",
+      "yarnName": "Wool of the Andes Worsted",
+      "yarnWeightId": "w",
+      "colorways": 96
+    },
+    {
+      "brandId": "knit_picks",
+      "brandName": "Knit Picks",
+      "yarnId": "woolen_cotton",
+      "yarnName": "Woolen Cotton",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "knitting_for_olive",
+      "brandName": "Knitting for Olive",
+      "yarnId": "cotton_merino",
+      "yarnName": "Cotton Merino",
+      "yarnWeightId": "lf",
+      "colorways": 29
+    },
+    {
+      "brandId": "lily_sugar_n_cream",
+      "brandName": "Lily Sugar'n Cream",
+      "yarnId": "the_original",
+      "yarnName": "The Original",
+      "yarnWeightId": "w",
+      "colorways": 41
+    },
+    {
+      "brandId": "lindehobby",
+      "brandName": "LindeHobby",
+      "yarnId": "velvet_lux",
+      "yarnName": "Velvet Lux",
+      "yarnWeightId": "sb",
+      "colorways": 41
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "24_7_cotton",
+      "yarnName": "24/7 Cotton",
+      "yarnWeightId": "w",
+      "colorways": 37
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "basic_stitch_anti_microbial",
+      "yarnName": "Basic Stitch Anti-Microbial",
+      "yarnWeightId": "w",
+      "colorways": 12
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "basic_stitch_anti_pilling",
+      "yarnName": "Basic Stitch Anti Pilling",
+      "yarnWeightId": "w",
+      "colorways": 55
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "coboo",
+      "yarnName": "Coboo",
+      "yarnWeightId": "d",
+      "colorways": 18
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "color_theory",
+      "yarnName": "Color Theory",
+      "yarnWeightId": "w",
+      "colorways": 18
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "feels_like_butta",
+      "yarnName": "Feels Like Butta",
+      "yarnWeightId": "w",
+      "colorways": 18
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "heartland",
+      "yarnName": "Heartland",
+      "yarnWeightId": "w",
+      "colorways": 38
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "hue_me",
+      "yarnName": "Hue + Me",
+      "yarnWeightId": "b",
+      "colorways": 30
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "lb_collection_superwash_merino",
+      "yarnName": "LB Collection Superwash Merino",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "pound_of_love",
+      "yarnName": "Pound of Love",
+      "yarnWeightId": "w",
+      "colorways": 32
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "re_spun",
+      "yarnName": "Re-Spun",
+      "yarnWeightId": "w",
+      "colorways": 18
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "re_up_bonus_bundle",
+      "yarnName": "Re-Up Bonus Bundle",
+      "yarnWeightId": "w",
+      "colorways": 12
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "schitts_creek",
+      "yarnName": "Schitt's Creek",
+      "yarnWeightId": "a",
+      "colorways": 16
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "truboo",
+      "yarnName": "Truboo",
+      "yarnWeightId": "d",
+      "colorways": 33
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "vannas_choice",
+      "yarnName": "Vanna's Choice",
+      "yarnWeightId": "w",
+      "colorways": 43
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "wool_ease",
+      "yarnName": "Wool-Ease",
+      "yarnWeightId": "w",
+      "colorways": 32
+    },
+    {
+      "brandId": "lion_brand",
+      "brandName": "Lion Brand",
+      "yarnId": "wool_ease_dk",
+      "yarnName": "Wool-Ease DK",
+      "yarnWeightId": "d",
+      "colorways": 18
+    },
+    {
+      "brandId": "loops_and_threads",
+      "brandName": "Loops & Threads",
+      "yarnId": "color_craft",
+      "yarnName": "Color Craft",
+      "yarnWeightId": "a",
+      "colorways": 7
+    },
+    {
+      "brandId": "loops_and_threads",
+      "brandName": "Loops & Threads",
+      "yarnId": "impeccable",
+      "yarnName": "Impeccable",
+      "yarnWeightId": "w",
+      "colorways": 75
+    },
+    {
+      "brandId": "loops_and_threads",
+      "brandName": "Loops & Threads",
+      "yarnId": "silky_soft",
+      "yarnName": "Silky Soft",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "loops_and_threads",
+      "brandName": "Loops & Threads",
+      "yarnId": "soft_and_shiny_solid",
+      "yarnName": "Soft & Shiny Solid",
+      "yarnWeightId": "a",
+      "colorways": 38
+    },
+    {
+      "brandId": "loops_and_threads",
+      "brandName": "Loops & Threads",
+      "yarnId": "soft_classic",
+      "yarnName": "Soft Classic",
+      "yarnWeightId": "a",
+      "colorways": 49
+    },
+    {
+      "brandId": "malabrigo",
+      "brandName": "Malabrigo",
+      "yarnId": "rios",
+      "yarnName": "Rios",
+      "yarnWeightId": "w",
+      "colorways": 94
+    },
+    {
+      "brandId": "malabrigo",
+      "brandName": "Malabrigo",
+      "yarnId": "worsted",
+      "yarnName": "Worsted",
+      "yarnWeightId": "w",
+      "colorways": 68
+    },
+    {
+      "brandId": "maurice_brassard",
+      "brandName": "Maurice Brassard",
+      "yarnId": "cotton",
+      "yarnName": "Cotton",
+      "yarnWeightId": "a",
+      "colorways": 81
+    },
+    {
+      "brandId": "miss_babs",
+      "brandName": "Miss Babs",
+      "yarnId": "sojourn",
+      "yarnName": "Sojourn",
+      "yarnWeightId": "f",
+      "colorways": 86
+    },
+    {
+      "brandId": "nako",
+      "brandName": "Nako",
+      "yarnId": "elit_baby",
+      "yarnName": "Elit Baby",
+      "yarnWeightId": "d",
+      "colorways": 64
+    },
+    {
+      "brandId": "paintbox_yarns",
+      "brandName": "Paintbox Yarns",
+      "yarnId": "simply_dk",
+      "yarnName": "Simply DK",
+      "yarnWeightId": "d",
+      "colorways": 63
+    },
+    {
+      "brandId": "patons",
+      "brandName": "Patons",
+      "yarnId": "astra",
+      "yarnName": "Astra",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "patons",
+      "brandName": "Patons",
+      "yarnId": "canadiana",
+      "yarnName": "Canadiana",
+      "yarnWeightId": "w",
+      "colorways": 42
+    },
+    {
+      "brandId": "patons",
+      "brandName": "Patons",
+      "yarnId": "classic_wool_worsted_yarn",
+      "yarnName": "Classic Wool Worsted Yarn",
+      "yarnWeightId": "w",
+      "colorways": 49
+    },
+    {
+      "brandId": "pingouin",
+      "brandName": "Pingouin",
+      "yarnId": "pingo_first",
+      "yarnName": "Pingo First",
+      "yarnWeightId": "d",
+      "colorways": 31
+    },
+    {
+      "brandId": "plymouth_yarn",
+      "brandName": "Plymouth Yarn",
+      "yarnId": "dk_merino_superwash",
+      "yarnName": "DK Merino Superwash",
+      "yarnWeightId": "d",
+      "colorways": 44
+    },
+    {
+      "brandId": "plymouth_yarn",
+      "brandName": "Plymouth Yarn",
+      "yarnId": "encore_worsted",
+      "yarnName": "Encore Worsted",
+      "yarnWeightId": "w",
+      "colorways": 103
+    },
+    {
+      "brandId": "plymouth_yarn",
+      "brandName": "Plymouth Yarn",
+      "yarnId": "worsted_merino_superwash",
+      "yarnName": "Worsted Merino Superwash",
+      "yarnWeightId": "w",
+      "colorways": 71
+    },
+    {
+      "brandId": "rauma",
+      "brandName": "Rauma",
+      "yarnId": "finull",
+      "yarnName": "Finull",
+      "yarnWeightId": "f",
+      "colorways": 137
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "afternoon_cotton",
+      "yarnName": "Afternoon Cotton",
+      "yarnWeightId": "d",
+      "colorways": 37
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "anti_pilling_everyday_dk",
+      "yarnName": "Anti-Pilling Everyday DK",
+      "yarnWeightId": "d",
+      "colorways": 74
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "anti_pilling_everyday_worsted",
+      "yarnName": "Anti-Pilling Everyday Worsted",
+      "yarnWeightId": "w",
+      "colorways": 63
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "basix_dk",
+      "yarnName": "Basix DK",
+      "yarnWeightId": "d",
+      "colorways": 65
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "basix_worsted",
+      "yarnName": "Basix Worsted",
+      "yarnWeightId": "w",
+      "colorways": 84
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "home_cotton_solids",
+      "yarnName": "Home Cotton Solids",
+      "yarnWeightId": "a",
+      "colorways": 26
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "parfait_chunky",
+      "yarnName": "Parfait Chunky",
+      "yarnWeightId": "sb",
+      "colorways": 62
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "retro_velvet",
+      "yarnName": "Retro Velvet",
+      "yarnWeightId": "sb",
+      "colorways": 28
+    },
+    {
+      "brandId": "premier",
+      "brandName": "Premier",
+      "yarnId": "stitch_please_superwash_worsted",
+      "yarnName": "Stitch Please Superwash Worsted",
+      "yarnWeightId": "w",
+      "colorways": 48
+    },
+    {
+      "brandId": "purl_soho",
+      "brandName": "Purl Soho",
+      "yarnId": "good_wool",
+      "yarnName": "Good Wool",
+      "yarnWeightId": "s",
+      "colorways": 37
+    },
+    {
+      "brandId": "purl_soho",
+      "brandName": "Purl Soho",
+      "yarnId": "linen_quill",
+      "yarnName": "Linen Quill",
+      "yarnWeightId": "f",
+      "colorways": 70
+    },
+    {
+      "brandId": "red_heart",
+      "brandName": "Red Heart",
+      "yarnId": "super_saver_solids",
+      "yarnName": "Super Saver Solids",
+      "yarnWeightId": "w",
+      "colorways": 65
+    },
+    {
+      "brandId": "red_heart",
+      "brandName": "Red Heart",
+      "yarnId": "with_love",
+      "yarnName": "With Love",
+      "yarnWeightId": "w",
+      "colorways": 35
+    },
+    {
+      "brandId": "rosarios_4",
+      "brandName": "Rosários 4",
+      "yarnId": "for_nature",
+      "yarnName": "For Nature",
+      "yarnWeightId": "d",
+      "colorways": 42
+    },
+    {
+      "brandId": "rowan",
+      "brandName": "Rowan",
+      "yarnId": "felted_tweed",
+      "yarnName": "Felted Tweed",
+      "yarnWeightId": "d",
+      "colorways": 56
+    },
+    {
+      "brandId": "sandnes",
+      "brandName": "Sandnes",
+      "yarnId": "line",
+      "yarnName": "Line",
+      "yarnWeightId": "w",
+      "colorways": 35
+    },
+    {
+      "brandId": "sandnes",
+      "brandName": "Sandnes",
+      "yarnId": "peer_gynt",
+      "yarnName": "Peer Gynt",
+      "yarnWeightId": "d",
+      "colorways": 57
+    },
+    {
+      "brandId": "sandnes",
+      "brandName": "Sandnes",
+      "yarnId": "petiteknit_double_sunday",
+      "yarnName": "Petiteknit Double Sunday",
+      "yarnWeightId": "d",
+      "colorways": 16
+    },
+    {
+      "brandId": "sandnes",
+      "brandName": "Sandnes",
+      "yarnId": "sunday",
+      "yarnName": "Sunday",
+      "yarnWeightId": "l",
+      "colorways": 54
+    },
+    {
+      "brandId": "sandnes",
+      "brandName": "Sandnes",
+      "yarnId": "tynn_peer_gynt",
+      "yarnName": "Tynn Peer Gynt",
+      "yarnWeightId": "f",
+      "colorways": 50
+    },
+    {
+      "brandId": "schachenmayr",
+      "brandName": "Schachenmayr",
+      "yarnId": "bravo",
+      "yarnName": "Bravo",
+      "yarnWeightId": "d",
+      "colorways": 98
+    },
+    {
+      "brandId": "schachenmayr",
+      "brandName": "Schachenmayr",
+      "yarnId": "catania",
+      "yarnName": "Catania",
+      "yarnWeightId": "s",
+      "colorways": 101
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "cahlista",
+      "yarnName": "Cahlista",
+      "yarnWeightId": "a",
+      "colorways": 109
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "catona",
+      "yarnName": "Catona",
+      "yarnWeightId": "f",
+      "colorways": 113
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "chunky_monkey",
+      "yarnName": "Chunky Monkey",
+      "yarnWeightId": "a",
+      "colorways": 93
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "colour_crafter",
+      "yarnName": "Colour Crafter",
+      "yarnWeightId": "d",
+      "colorways": 93
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "scrumptious",
+      "yarnName": "Scrumptious",
+      "yarnWeightId": "d",
+      "colorways": 80
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "softfun",
+      "yarnName": "Softfun",
+      "yarnWeightId": "d",
+      "colorways": 92
+    },
+    {
+      "brandId": "scheepjes",
+      "brandName": "Scheepjes",
+      "yarnId": "stone_washed",
+      "yarnName": "Stone Washed",
+      "yarnWeightId": "s",
+      "colorways": 36
+    },
+    {
+      "brandId": "sirdar",
+      "brandName": "Sirdar",
+      "yarnId": "heyfield_bonus_dk",
+      "yarnName": "Heyfield Bonus DK",
+      "yarnWeightId": "d",
+      "colorways": 103
+    },
+    {
+      "brandId": "skeinz",
+      "brandName": "Skeinz",
+      "yarnId": "eros",
+      "yarnName": "Eros",
+      "yarnWeightId": "s",
+      "colorways": 12
+    },
+    {
+      "brandId": "source_of_fibre",
+      "brandName": "Source of Fibre",
+      "yarnId": "clear_as_cotton",
+      "yarnName": "Clear As Cotton",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "source_of_fibre",
+      "brandName": "Source of Fibre",
+      "yarnId": "dirty_dk",
+      "yarnName": "Dirty DK",
+      "yarnWeightId": "d",
+      "colorways": 22
+    },
+    {
+      "brandId": "stylecraft",
+      "brandName": "Stylecraft",
+      "yarnId": "naturals_bamboo_cotton",
+      "yarnName": "Naturals Bamboo + Cotton",
+      "yarnWeightId": "d",
+      "colorways": 47
+    },
+    {
+      "brandId": "stylecraft",
+      "brandName": "Stylecraft",
+      "yarnId": "naturals_organic_cotton",
+      "yarnName": "Naturals Organic Cotton",
+      "yarnWeightId": "d",
+      "colorways": 38
+    },
+    {
+      "brandId": "stylecraft",
+      "brandName": "Stylecraft",
+      "yarnId": "special_dk",
+      "yarnName": "Special DK",
+      "yarnWeightId": "d",
+      "colorways": 120
+    },
+    {
+      "brandId": "svarta_faret",
+      "brandName": "Svarta Fåret",
+      "yarnId": "tilda",
+      "yarnName": "Tilda",
+      "yarnWeightId": "s",
+      "colorways": 67
+    },
+    {
+      "brandId": "svarta_faret",
+      "brandName": "Svarta Fåret",
+      "yarnId": "ulrika_ullgarn",
+      "yarnName": "Ulrika Ullgarn",
+      "yarnWeightId": "w",
+      "colorways": 49
+    },
+    {
+      "brandId": "tessiland",
+      "brandName": "Tessiland",
+      "yarnId": "chuck",
+      "yarnName": "Chuck",
+      "yarnWeightId": "s",
+      "colorways": 43
+    },
+    {
+      "brandId": "the_womens_institute",
+      "brandName": "The Women's Institute",
+      "yarnId": "premium_acrylic",
+      "yarnName": "Premium Acrylic",
+      "yarnWeightId": "d",
+      "colorways": 21
+    },
+    {
+      "brandId": "tricot_cafe",
+      "brandName": "Tricot Cafè",
+      "yarnId": "rudy",
+      "yarnName": "Rudy",
+      "yarnWeightId": "f",
+      "colorways": 44
+    },
+    {
+      "brandId": "tufting_europe",
+      "brandName": "Tufting Europe",
+      "yarnId": "new_zealand_wool",
+      "yarnName": "New Zealand Wool",
+      "colorways": 53
+    },
+    {
+      "brandId": "valley_yarns",
+      "brandName": "Valley Yarns",
+      "yarnId": "haydenville_dk",
+      "yarnName": "Haydenville DK",
+      "yarnWeightId": "d",
+      "colorways": 27
+    },
+    {
+      "brandId": "we_love_yarn",
+      "brandName": "We Love Yarn",
+      "yarnId": "mega_ball",
+      "yarnName": "Mega Ball",
+      "yarnWeightId": "w",
+      "colorways": 40
+    },
+    {
+      "brandId": "west_yorkshire_spinners",
+      "brandName": "West Yorkshire Spinners",
+      "yarnId": "the_croft_dk",
+      "yarnName": "The Croft DK",
+      "yarnWeightId": "d",
+      "colorways": 25
+    },
+    {
+      "brandId": "willow_yarns",
+      "brandName": "Willow Yarns",
+      "yarnId": "wash_worsted",
+      "yarnName": "Wash Worsted",
+      "yarnWeightId": "w",
+      "colorways": 55
+    },
+    {
+      "brandId": "yarn_and_colors",
+      "brandName": "Yarn and Colors",
+      "yarnId": "epic",
+      "yarnName": "Epic",
+      "yarnWeightId": "a",
+      "colorways": 125
+    },
+    {
+      "brandId": "yarnart",
+      "brandName": "YarnArt",
+      "yarnId": "jeans",
+      "yarnName": "Jeans",
+      "yarnWeightId": "s",
+      "colorways": 64
+    },
+    {
+      "brandId": "yarnsmiths",
+      "brandName": "Yarnsmiths",
+      "yarnId": "create_dk",
+      "yarnName": "Create DK",
+      "yarnWeightId": "d",
+      "colorways": 120
+    }
+  ]
+}
