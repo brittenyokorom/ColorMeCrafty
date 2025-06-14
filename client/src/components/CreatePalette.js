@@ -35,8 +35,6 @@ function CreatePalette() {
       (option) => option.value
     );
     setPendingSelection(selectedOptions);
-    console.log("Selected Brands:", selectedOptions);
-    // If no brands are selected, reset filtered results to all result
   };
 
   const handleBrandApply = () => {
@@ -49,10 +47,6 @@ function CreatePalette() {
       pendingSelection.includes(result.brandName)
     );
     setFilteredResults(filtered);
-    setPendingSelection([]); // Clear pending selection after applying
-    setError(""); // Clear any previous error
-    console.log("Filtered Results:", filtered);
-    console.log("Pending Selection after apply:", pendingSelection);
   };
 
   console.log("Pending Selection:", pendingSelection);
@@ -95,7 +89,6 @@ function CreatePalette() {
     return brightness > 128 ? "black" : "white";
   };
 
-  // Modal state for showing selected colors
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -169,7 +162,6 @@ function CreatePalette() {
           </button>
         </form>
 
-        {/* Modal for showing selected colors */}
         {showModal && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
@@ -214,7 +206,6 @@ function CreatePalette() {
         </h2>
         <HexSearch setResults={setResults} setError={setError} />
 
-        {/* Brand filter */}
         <div className="filter-container flex flex-col sm:flex-row items-start sm:items-center gap-4 my-6 p-4 bg-gray-100 rounded-lg shadow">
           <label
             className="filter-label block text-gray-700 text-sm font-bold mb-2 sm:mb-0"
