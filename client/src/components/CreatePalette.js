@@ -172,33 +172,42 @@ function CreatePalette() {
         <HexSearch setResults={setResults} setError={setError} />
 
         {/* Brand filter */}
-        <div className="filter-container">
-          <label className="filter-label" htmlFor="brand">
-            Filter by Brand
-          </label>
-          <select
-            id="brand"
-            multiple
-            value={pendingSelection}
-            onChange={handleBrandSelectChange}
-            className="filter-select"
-            style={{ minHeight: '100px' }}
-          >
-            {brands.map((brand) => (
-              <option key={brand.brandId} value={brand.brandName}>
-                {brand.brandName}
-              </option>
-            ))}
-          </select>
-          <button
-            type="button"
-            className="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded"
-            onClick={handleBrandApply}
-            style={{ marginLeft: '8px', marginTop: '8px' }}
-          >
-            Apply
-          </button>
-        </div>
+        <div className="filter-container flex flex-col sm:flex-row items-start sm:items-center gap-4 my-6 p-4 bg-gray-100 rounded-lg shadow">
+  <label
+    className="filter-label block text-gray-700 text-sm font-bold mb-2 sm:mb-0"
+    htmlFor="brand"
+    style={{ minWidth: 120 }}
+  >
+    Filter by Brand
+  </label>
+  <select
+    id="brand"
+    multiple
+    value={pendingSelection}
+    onChange={handleBrandSelectChange}
+    className="filter-select border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white text-gray-800"
+    style={{
+      minHeight: '120px',
+      minWidth: '220px',
+      fontSize: '0.95rem',
+      overflowY: 'auto',
+    }}
+  >
+    {brands.map((brand) => (
+      <option key={brand.brandId} value={brand.brandName}>
+        {brand.brandName}
+      </option>
+    ))}
+  </select>
+  <button
+    type="button"
+    className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+    onClick={handleBrandApply}
+    style={{ marginTop: 0 }}
+  >
+    Apply
+  </button>
+</div>
         {error && <p className="text-red-500 mt-4">{error}</p>}
         <div className="results-container mt-4">
           {filteredResults.map((result, index) => (
