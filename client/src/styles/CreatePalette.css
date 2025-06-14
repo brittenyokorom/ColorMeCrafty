@@ -91,19 +91,26 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem;
+}
+
 .palette-card {
+  aspect-ratio: 1 / 1;
+  background: #eee;
+  border-radius: 0.75rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  padding: 1rem;
-  margin: 10px;
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: .25rem;
   position: relative;
-  width: 8rem;
-  height: 12rem;
+  min-width: 0;
+  max-width: 240px;
+  max-height: 240px;
 }
 
 .palette-card .options-section {
@@ -140,4 +147,13 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.palette-card .palette-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  word-break: break-word;
+  white-space: normal;
+  text-align: center;
+  margin-top: auto;
 }

@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faLock, faUnlock } from "@fortawesome/free-solid-svg-icons";
 import HexSearch from "./HexSearch";
 import colors from "../data/colors.json";
+import ReactSelect from "react-select";
 import "../styles/CreatePalette.css";
 
 // Remove duplicates by brandId from colors.data
@@ -30,13 +31,6 @@ function CreatePalette() {
   }, [results]);
 
   // Filter yarn list by selected brands
-  const handleBrandSelectChange = (e) => {
-    const selectedOptions = Array.from(e.target.selectedOptions).map(
-      (option) => option.value
-    );
-    setPendingSelection(selectedOptions);
-  };
-
   const handleBrandApply = () => {
     if (pendingSelection.length === 0) {
       setFilteredResults(results);
@@ -91,9 +85,14 @@ function CreatePalette() {
 
   const [showModal, setShowModal] = useState(false);
 
+  const brandOptions = brands.map((brand) => ({
+    value: brand.brandId,
+    label: brand.brandName,
+  }));
+
   return (
     <div className="create-palette-container h-screen flex flex-col items-center justify-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
-      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-6xl">
         <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">
           Create a Palette
         </h1>
@@ -114,18 +113,27 @@ function CreatePalette() {
               required
             />
           </div>
-          <div className="grid grid-cols-4 gap-4 mb-4">
+          <div className="palette-grid mb-4">
             {colorsState.map((color, index) => (
               <div
                 key={index}
                 className="palette-card"
                 style={{ backgroundColor: color.hex }}
               >
-                <div className="options-section">
+                <div
+                  className="options-section"
+                  style={{
+                    position: "absolute",
+                    top: 8,
+                    right: 8,
+                    display: "flex",
+                    gap: 4,
+                  }}
+                >
                   <button
                     type="button"
                     onClick={() => toggleLockColor(index)}
-                    className="lock-button"
+                    className="lock-button w-4 h-4 p-1 rounded-full bg-gray-200 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
                   >
                     <FontAwesomeIcon icon={color.locked ? faLock : faUnlock} />
                   </button>
@@ -137,18 +145,12 @@ function CreatePalette() {
                     <FontAwesomeIcon icon={faTrash} />
                   </button>
                 </div>
-                <div className="divider"></div>
                 <div
-                  className="text-center text-xs mt-auto"
+                  className="palette-text"
                   style={{ color: getTextColor(color.hex) }}
                 >
-                  <p
-                    className="font-bold truncate"
-                    style={{ color: getTextColor(color.hex) }}
-                  >
-                    {color.name}
-                  </p>
-                  <p className="truncate">{color.brandName}</p>
+                  <div>{color.name}</div>
+                  <div style={{ fontWeight: 400 }}>{color.brandName}</div>
                 </div>
               </div>
             ))}
@@ -206,38 +208,42 @@ function CreatePalette() {
         </h2>
         <HexSearch setResults={setResults} setError={setError} />
 
-        <div className="filter-container flex flex-col sm:flex-row items-start sm:items-center gap-4 my-6 p-4 bg-gray-100 rounded-lg shadow">
+        <div className="my-6 w-full flex flex-col items-center">
           <label
-            className="filter-label block text-gray-700 text-sm font-bold mb-2 sm:mb-0"
-            htmlFor="brand"
-            style={{ minWidth: 120 }}
+            className="block text-gray-700 text-sm font-bold mb-2 text-center"
+            htmlFor="brand-select"
           >
             Filter by Brand
           </label>
-          <select
-            id="brand"
-            multiple
-            value={pendingSelection}
-            onChange={handleBrandSelectChange}
-            className="filter-select border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white text-gray-800"
-            style={{
-              minHeight: "120px",
-              minWidth: "220px",
-              fontSize: "0.95rem",
-              overflowY: "auto",
-            }}
-          >
-            {brands.map((brand) => (
-              <option key={brand.brandId} value={brand.brandName}>
-                {brand.brandName}
-              </option>
-            ))}
-          </select>
+          <div className="w-full max-w-lg">
+            <ReactSelect
+              inputId="brand-select"
+              isMulti
+              options={brandOptions}
+              value={brandOptions.filter((opt) => pendingSelection.includes(opt.value))}
+              onChange={(selected) => {
+                const values = selected ? selected.map((opt) => opt.value) : [];
+                setPendingSelection(values);
+              }}
+              className="basic-multi-select"
+              classNamePrefix="select"
+              placeholder="Select brands..."
+              styles={{
+                container: (provided) => ({
+                  ...provided,
+                  width: "100%",
+                }),
+                control: (provided) => ({
+                  ...provided,
+                  minHeight: "48px",
+                }),
+              }}
+            />
+          </div>
           <button
             type="button"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+            className="mt-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded shadow focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             onClick={handleBrandApply}
-            style={{ marginTop: 0 }}
           >
             Apply
           </button>
