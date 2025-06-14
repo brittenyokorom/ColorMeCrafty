@@ -13,8 +13,9 @@ function CreatePalette() {
   const [colorsState, setColors] = useState([]);
   const [results, setResults] = useState([]);
   const [error, setError] = useState('');
-  const [brands] = useState(colors); 
+  const [brands] = useState(colors.data); 
   const [selectedBrands, setSelectedBrands] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   const addColorToPalette = (hex, name, brandName) => {
     if (colorsState.some(color => color.hex === hex)) {
@@ -114,7 +115,8 @@ function CreatePalette() {
               </div>
             ))}
           </div>
-          <button type="submit" className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button type="submit" className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+          onCleck={() => setShowModal(true)}>
             Create Palette
           </button>
         </form>
@@ -140,6 +142,34 @@ function CreatePalette() {
           ))}
         </div>
       </div>
+      {showModal && (
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+    <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
+      <h2 className="text-2xl font-bold mb-4">Your Palette</h2>
+      <div className="grid grid-cols-4 gap-4 mb-4">
+        {colorsState.map((color, index) => (
+          <a
+            key={index}
+            href={`https://yarn-colorways.p.rapidapi.com/v1/yarns/${color.yarnId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block p-2 rounded"
+            style={{ backgroundColor: color.hex, textDecoration: 'none' }}
+          >
+            <div className="text-xs font-bold" style={{ color: "#fff" }}>{color.brandName}</div>
+            <div className="text-xs" style={{ color: "#fff" }}>{color.name}</div>
+          </a>
+        ))}
+      </div>
+      <button
+        className="mt-4 bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+        onClick={() => setShowModal(false)}
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
     </div>
   );
 }
