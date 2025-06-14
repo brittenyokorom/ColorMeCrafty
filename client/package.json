@@ -23,6 +23,7 @@
     "react-select": "^5.10.0",
     "slick": "^1.12.2"
   },
+  "homepage": "https://brittenyokorom.github.io/ColorMeCrafty",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -49,6 +50,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   }
