@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ColorMeCrafty/static/css/main.ad73eb55.css",
-    "main.js": "/ColorMeCrafty/static/js/main.63fb9e02.js",
+    "main.js": "/ColorMeCrafty/static/js/main.fbadd370.js",
     "index.html": "/ColorMeCrafty/index.html",
     "main.ad73eb55.css.map": "/ColorMeCrafty/static/css/main.ad73eb55.css.map",
-    "main.63fb9e02.js.map": "/ColorMeCrafty/static/js/main.63fb9e02.js.map"
+    "main.fbadd370.js.map": "/ColorMeCrafty/static/js/main.fbadd370.js.map"
   },
   "entrypoints": [
     "static/css/main.ad73eb55.css",
-    "static/js/main.63fb9e02.js"
+    "static/js/main.fbadd370.js"
   ]
 }
