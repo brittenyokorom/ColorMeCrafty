@@ -29,3 +29,7 @@ To run ColorMeCrafty locally, follow these steps:
    ```sh
    git clone https://github.com/your-username/ColorMeCrafty.git
    cd ColorMeCrafty
+
+### Hosting
+
+The website is hosted at https://brittenyokorom.github.io/ColorMeCrafty/
