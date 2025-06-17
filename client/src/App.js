@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/ColorMeCrafty" element={<Home />} />
         <Route path="/create-palette" element={<CreatePalette/>} />
       </Routes>
     </Router>
